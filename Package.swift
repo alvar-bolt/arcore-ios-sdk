@@ -17,7 +17,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "ARCore", platforms: [.iOS(.v13)],
+  name: "ARCore", platforms: [.iOS(.v15)],
   products: [
     .library(name: "ARCoreCloudAnchors", targets: ["CloudAnchors"]),
     .library(name: "ARCoreGeospatial", targets: ["Geospatial"]),
@@ -30,7 +30,7 @@ let package = Package(
     .package(url: "https://github.com/google/GoogleDataTransport.git", "10.0.0"..<"11.0.0"),
     .package(url: "https://github.com/google/gtm-session-fetcher.git", "2.1.0"..<"4.0.0"),
     .package(
-      url: "https://github.com/firebase/firebase-ios-sdk.git", .upToNextMajor(from: "11.0.0")),
+      url: "https://github.com/firebase/firebase-ios-sdk.git", "11.0.0"..<"999.0.0"),
   ],
   targets: [
     .binaryTarget(
